@@ -1,4 +1,3 @@
-[submodule "uWebSockets"]
+[submodule "shared/uWebSockets"]
 	path = shared/uWebSockets
-	url = https://github.com/shahzadlone/uWebSockets
-	branch = wio-master
+	url = https://github.com/shahzadlone/uWebsockets
