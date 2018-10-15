@@ -19,7 +19,7 @@ Exists() {
 }
 
 Copy() {
-    sudo mkdir -p "${2}"$(dirname "${1}") && sudo cp "${1}" "${2}${1}";
+    sudo mkdir -p "${2}" && sudo cp "${1}" "${2}";
 }
 
 UWS_DIR='./shared/uWebSockets';
@@ -49,7 +49,7 @@ make -C "${UWS_DIR}";
 
 if [ ${?} -eq 0 ]; then
 
-    echo "Successfully built uWebsockets now copying the .so to './bin/deps' folder.";
+    echo "Successfully built uWebsockets now copying the .so to ...uWebSockets/lib'.";
 
     if [ -f ${UWS_LIB} ]; then
 
