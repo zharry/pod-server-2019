@@ -11,9 +11,9 @@ project:
     default_target: main
 
 targets:
-   main:
+  main:
     src: src
- platform: native
+    platform: native
 
 libraries:
   uWebSockets:
