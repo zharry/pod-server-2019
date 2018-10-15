@@ -11,6 +11,11 @@ project:
     default_target: main
 
 targets:
-  main:
+   main:
     src: src
+ platform: native
 
+libraries:
+  uWebSockets:
+    lib_path: ./shared/uWebSockets/lib
+    include_path: ./shared/uWebSockets/src

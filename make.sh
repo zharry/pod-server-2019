@@ -14,7 +14,17 @@
 #========================================================================================
 # Helper functions.
 #========================================================================================
-Exists() { which "${1}" 2>&1 > /dev/null; echo ${?}; }
+Exists() {
+    which "${1}" 2>&1 > /dev/null; echo ${?};
+}
+
+Copy() {
+    sudo mkdir -p "${2}"$(dirname "${1}") && sudo cp "${1}" "${2}${1}";
+}
+
+UWS_DIR='./shared/uWebSockets';
+UWS_LIB_DIR="${UWS_DIR}/lib";
+UWS_LIB="${UWS_DIR}/libuWS.so";
 
 #========================================================================================
 # Begin script.
@@ -35,19 +45,19 @@ else
 
 fi
 
-make -C ./shared/uWebsockets;
+make -C "${UWS_DIR}";
 
 if [ ${?} -eq 0 ]; then
 
     echo "Successfully built uWebsockets now copying the .so to './bin/deps' folder.";
 
-    if [ -f ./shared/uWebSockets/libiWS.so ]; then
+    if [ -f ${UWS_LIB} ]; then
 
-        cp ./shared/uWebSockets/libiWS.so ./bin/deps
+        Copy "${UWS_LIB}" "${UWS_LIB_DIR}";
 
     else
 
-        echo "Error copying the submodule binary to the bin folder.";
+        echo "Submodule binary not found (libuWS.so not there).";
 
     fi
 
