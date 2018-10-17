@@ -1,4 +1,4 @@
-type: app
+type: pkg
 
 project:
   name: PodServer
@@ -12,10 +12,12 @@ project:
 
 targets:
   main:
+    compile_options: 
+      flags: [-L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include -std=c++11 -O3 -lpthread -L. -luWS -lssl -lcrypto -lz -luv]
     src: src
     platform: native
 
 libraries:
-  uWebSockets:
-    lib_path: ./shared/uWebSockets/lib
-    include_path: ./shared/uWebSockets/src
+  uWS:
+    lib_path: $(PROJECT_PATH)/shared/uWebSockets/lib
+    include_path: $(PROJECT_PATH)/shared/uWebSockets/src
