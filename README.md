@@ -5,10 +5,15 @@ This is a `wio` application.
 
 To build this application:
 ```bash
-wio build
+./make.sh
 ```
+Which does these things for us:
+   1) Make sure the sub-module(s) are/is properly cloned.
+   2) Build the sub-module(s) (uWebSockets , etc..), can be shared libs aswell.
+   3) Copy the shared lib(s) (.so) to our main directories 'bin/deps' folder.
+   4) Build our server using wio, while linking to the shared binary (.so file) that was copied to the deps folder in (3) and built in (2).
 
-To run this application:
-```bash
-wio run
-```
+Todo: 
+    - Step 4 : Get wio build working properly, with the config in the wio.yml.
+    - Write our own server (tweak according to our needs).
+
