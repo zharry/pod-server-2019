@@ -13,7 +13,7 @@ project:
 targets:
   main:
     compile_options: 
-      flags: [-L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include -std=c++11 -O3 -lpthread -L. -luWS -lssl -lcrypto -lz -luv]
+      flags: [ -L/usr/local/opt/openssl/lib -I/usr/local/opt/openssl/include -std=c++11 -O3 ./src/main.cpp -Wl,-rpath,./shared/uWebSockets/bin -I./shared/uWebSockets/src -L./shared/uWebSockets/lib -lpthread -luWS -lssl -lcrypto -lz -luv ]
     src: src
     platform: native
 
