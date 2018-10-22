@@ -30,5 +30,8 @@ libraries:
   pthread:
       lib_path: /usr/lib/x86_64-linux-gnu
 
-  libz:
+  z:
+      lib_path: /lib/x86_64-linux-gnu
+
+  crypto:
       lib_path: /lib/x86_64-linux-gnu
