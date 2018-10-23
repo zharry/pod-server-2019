@@ -1,6 +1,6 @@
 // NOTE: This is not part of the library, this file holds examples and tests
 
-#include "../shared/uWebSockets/src/uWS.h"
+#include <uWS.h>
 #include <iostream>
 #include <chrono>
 #include <cmath>
@@ -1176,8 +1176,7 @@ void testAsync() {
     std::cout << "Falling through Async test" << std::endl;
 }
 
-int main(int argc, char *argv[])
-{
+int main(int argc, char *argv[]) {
     //serveEventSource();
     //serveHttp();
     //serveBenchmark();

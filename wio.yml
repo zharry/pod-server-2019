@@ -1,20 +1,21 @@
-type: pkg
+type: app
 
 project:
   name: PodServer
   version: 0.0.1
   keywords:
-  - wio
-  - app
+    - wio
+    - app
   compile_options:
-    wio_version: 0.5.1
+    wio_version: 0.5.2
     default_target: main
+    standard: C++11;C11
 
 targets:
   main:
-    compile_options: 
-      # flags: [ -Wl,-rpath,./shared/uWebSockets/bin ]
-      flags: [ -std=c++11 -O3 -luWS -lssl -lpthread -lz -lcrypto ]
+    flags:
+      target:
+        - -O3
     src: src
     platform: native
 
@@ -24,14 +25,21 @@ libraries:
     include_path: $(PROJECT_PATH)/shared/uWebSockets/src
 
   ssl:
-      lib_path: /usr/local/opt/openssl/lib
-      include_path: /usr/local/opt/openssl/include
-
-  pthread:
-      lib_path: /usr/lib/x86_64-linux-gnu
-
-  z:
-      lib_path: /lib/x86_64-linux-gnu
+    lib_path: /usr/local/opt/openssl/lib
+    include_path: /usr/local/opt/openssl/include
 
   crypto:
-      lib_path: /lib/x86_64-linux-gnu
+    lib_path: /usr/local/opt/openssl/lib
+    include_path: /user/local/opt/openssl/include
+
+  uv:
+    lib_path: /usr/local/opt/libuv/lib
+    include_path: /usr/local/opt/libuv/include
+
+  Threads:
+    global: true
+    required: true
+
+  ZLIB:
+    global: true
+    required: true

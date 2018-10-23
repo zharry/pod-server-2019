@@ -1,7 +1,10 @@
 
-default:
-	sudo ./make.sh
-#
+setup:
+	./scripts/setup.sh
+
+run:
+	./scripts/run.sh
+
 .PHONY: clean
 clean:
-	sudo ./clean.sh
+	./scripts/clean.sh
