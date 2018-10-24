@@ -7,9 +7,9 @@ project:
     - wio
     - app
   compile_options:
-    wio_version: 0.5.2
+    wio_version: 0.6.0
     default_target: main
-    standard: C++11;C11
+    standard: C++11,C11
 
 targets:
   main:
@@ -21,25 +21,43 @@ targets:
 
 libraries:
   uWS:
-    lib_path: $(PROJECT_PATH)/shared/uWebSockets/lib
-    include_path: $(PROJECT_PATH)/shared/uWebSockets/src
+    required: true
+    lib_path:
+    - $(PROJECT_PATH)/shared/uWebSockets/lib
+    include_path:
+    - $(PROJECT_PATH)/shared/uWebSockets/src
 
   ssl:
-    lib_path: /usr/local/opt/openssl/lib
-    include_path: /usr/local/opt/openssl/include
+    required: true
+    lib_path:
+    - $linux(/usr/local/opt/openssl/lib)
+    - $darwin(/usr/local/opt/openssl/lib)
+    include_path:
+    - $linux(/usr/local/opt/openssl/include)
+    - $darwin(/usr/local/opt/openssl/include)
 
   crypto:
-    lib_path: /usr/local/opt/openssl/lib
-    include_path: /user/local/opt/openssl/include
+    required: true
+    lib_path:
+    - $linux(/usr/local/opt/openssl/lib)
+    - $darwin(/usr/local/opt/openssl/lib)
+    include_path:
+    - $linux(/usr/local/opt/openssl/include)
+    - $darwin(/usr/local/opt/openssl/include)
 
   uv:
-    lib_path: /usr/local/opt/libuv/lib
-    include_path: /usr/local/opt/libuv/include
+    required: true
+    lib_path:
+    - $linux(/usr/local/opt/libuv/lib)
+    - $darwin(/usr/local/opt/libuv/lib)
+    include_path:
+    - $linux(/usr/local/opt/libuv/include)
+    - $darwin(/usr/local/opt/libuv/include)
 
   Threads:
-    global: true
+    cmake_package: true
     required: true
 
   ZLIB:
-    global: true
+    cmake_package: true
     required: true
