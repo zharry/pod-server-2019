@@ -40,4 +40,4 @@ else
     exit 22;
 fi
 
-wio clean --hard;
+sudo wio clean --hard;
