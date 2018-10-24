@@ -3,7 +3,7 @@ setup:
 	./scripts/setup.sh
 
 run:
-	./scripts/run.sh
+	sudo ./scripts/run.sh
 
 .PHONY: clean
 clean:
