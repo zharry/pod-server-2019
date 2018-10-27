@@ -19,45 +19,12 @@ targets:
     src: src
     platform: native
 
+dependencies:
+  wio-sqlitecpp:
+    version: 1.0.2
+
 libraries:
-  uWS:
-    required: true
-    lib_path:
-    - $(PROJECT_PATH)/shared/uWebSockets/lib
-    include_path:
-    - $(PROJECT_PATH)/shared/uWebSockets/src
-
-  ssl:
-    required: true
-    lib_path:
-    - $linux(/usr/local/opt/openssl/lib)
-    - $darwin(/usr/local/opt/openssl/lib)
-    include_path:
-    - $linux(/usr/local/opt/openssl/include)
-    - $darwin(/usr/local/opt/openssl/include)
-
-  crypto:
-    required: true
-    lib_path:
-    - $linux(/usr/local/opt/openssl/lib)
-    - $darwin(/usr/local/opt/openssl/lib)
-    include_path:
-    - $linux(/usr/local/opt/openssl/include)
-    - $darwin(/usr/local/opt/openssl/include)
-
-  uv:
-    required: true
-    lib_path:
-    - $linux(/usr/local/opt/libuv/lib)
-    - $darwin(/usr/local/opt/libuv/lib)
-    include_path:
-    - $linux(/usr/local/opt/libuv/include)
-    - $darwin(/usr/local/opt/libuv/include)
-
   Threads:
     cmake_package: true
     required: true
 
-  ZLIB:
-    cmake_package: true
-    required: true
