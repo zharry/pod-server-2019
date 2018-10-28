@@ -1,1 +1,8 @@
 .wio/
+.idea/
+cmake-build-debug/
+
+CMakeLists.txt
+dependencies.cmake
+
+

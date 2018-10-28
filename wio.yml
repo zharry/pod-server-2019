@@ -4,24 +4,30 @@ project:
   name: PodServer
   version: 0.0.1
   keywords:
-    - wio
-    - app
+  - wio
+  - app
   compile_options:
     wio_version: 0.6.0
-    default_target: main
-    standard: C++11,C11
+    standard: C++14,C11
+    default_target: test
 
 targets:
-  main:
-    flags:
-      target:
-        - -O3
+  test:
     src: src
     platform: native
+    definitions:
+      target:
+        - SENSOR_DB_FILE=/Users/deep/Development/waterloop/wio-packages/pod-server-2019/db_files/testing/sensor.db3
+        - CONTROLS_DB_FILE=/Users/deep/Development/waterloop/wio-packages/pod-server-2019/db_files/testing/controls.db3
+    flags:
+      target:
+      - -O3
 
 dependencies:
   wio-sqlitecpp:
     version: 1.0.2
+  can-packet:
+    version: 1.0.1
 
 libraries:
   Threads:
