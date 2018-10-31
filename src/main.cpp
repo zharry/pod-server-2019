@@ -4,8 +4,8 @@
 #include <CanPacket.h>
 
 int main() {
-    DatabaseHandler databaseHandler{};
+    DatabaseHandler *databaseHandler = DatabaseHandler::geInstance();
 
     wlp::Packet sP(10, 65.f, 20);
-    databaseHandler.storePacket(sP);
+    databaseHandler->storePacket(sP);
 }

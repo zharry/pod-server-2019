@@ -2,6 +2,7 @@
 #define PODSERVER_DATABASE_H
 
 #include <string>
+
 #include <SQLiteCpp/SQLiteCpp.h>
 #include <CanPacket.h>
 
@@ -15,15 +16,19 @@
 #endif
 
 class DatabaseHandler {
-    const SQLite::Database *sensorDB;
-    const SQLite::Database *controlsDB;
+    const SQLite::Database *m_pSensorDB;
+    const SQLite::Database *m_pControlsDB;
+    static DatabaseHandler *m_pInstance;
 
-public:
     DatabaseHandler(const std::string &sensorDBFilename, const std::string &controlsDBFilename);
 
     DatabaseHandler();
 
     ~DatabaseHandler();
+
+public:
+    /// Provides DatabaseHandler instance (singleton)
+    static DatabaseHandler* geInstance();
 
     /// Stores CAN packet received into appropriate database
     /// @param packet CAN packet

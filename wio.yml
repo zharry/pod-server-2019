@@ -7,7 +7,7 @@ project:
   - wio
   - app
   compile_options:
-    wio_version: 0.6.0
+    wio_version: 0.6.2
     standard: C++14,C11
     default_target: test
 
@@ -17,8 +17,8 @@ targets:
     platform: native
     definitions:
       target:
-        - SENSOR_DB_FILE=/Users/deep/Development/waterloop/wio-packages/pod-server-2019/db_files/testing/sensor.db3
-        - CONTROLS_DB_FILE=/Users/deep/Development/waterloop/wio-packages/pod-server-2019/db_files/testing/controls.db3
+        - SENSOR_DB_FILE=$(PROJECT_NAME)/db_files/testing/sensor.db3
+        - CONTROLS_DB_FILE=$(PROJECT_NAME)/db_files/testing/controls.db3
     flags:
       target:
       - -O3
@@ -28,9 +28,11 @@ dependencies:
     version: 1.0.2
   can-packet:
     version: 1.0.1
+  simple-websocket-server-cpp:
+    version: 1.0.3
 
 libraries:
   Threads:
     cmake_package: true
+    use_imported_targets: true
     required: true
-

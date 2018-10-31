@@ -1,6 +1,8 @@
 .wio/
 .idea/
 cmake-build-debug/
+db_files/prod/*.db3
+db_files/testing/*.db3
 
 CMakeLists.txt
 dependencies.cmake
