@@ -16,8 +16,9 @@
 #endif
 
 class DatabaseHandler {
-    const SQLite::Database *m_pSensorDB;
-    const SQLite::Database *m_pControlsDB;
+    SQLite::Database *m_pSensorDB;
+    SQLite::Database *m_pControlsDB;
+    std::string tableName;
     static DatabaseHandler *m_pInstance;
 
     DatabaseHandler(const std::string &sensorDBFilename, const std::string &controlsDBFilename);

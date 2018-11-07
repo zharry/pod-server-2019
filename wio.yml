@@ -9,17 +9,20 @@ project:
   compile_options:
     wio_version: 0.6.2
     standard: C++14,C11
-    default_target: test
+    default_target: main
 
 targets:
-  test:
+  main:
     src: src
     platform: native
     definitions:
       target:
-        - SENSOR_DB_FILE=$(PROJECT_NAME)/db_files/testing/sensor.db3
-        - CONTROLS_DB_FILE=$(PROJECT_NAME)/db_files/testing/controls.db3
+        - SENSOR_DB_FILE=db_files/testing/sensor.db3
+        - CONTROLS_DB_FILE=db_files/testing/controls.db3
     flags:
+      package:
+        - -lpthread
+        - -ldl
       target:
       - -O3
 
