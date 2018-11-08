@@ -1,27 +1,22 @@
 # Pod Server 2019
-Pod Server for 2018-2019 Waterloop Pod
 
-This is a `wio` application.
+Code base for pod server running on the pod while the hyperloop run is going on.
 
-To 'build' this application:
+## Build and Run
+
+This is a `wio` project so install wio (https://github.com/wio/wio)
+
+* Project depends on Boost so following Boost libraries must be installed:
+    * system
+    * thread
+    * coroutine
+    * context
+
 ```bash
-make
+cd pod-server-2019
+wio build
+wio run
 ```
-### Look at `scripts/make.sh` to see what the default make does to build our app.
+## Development
 
-
-To 'run' this application:
-```bash
-make run
-```
-### Look at `scripts/run.sh` to see what make clean does to clean our app.
-
-
-To 'clean' this application:
-```bash
-make clean
-```
-### Look at `scripts/clean.sh` to see what make clean does to clean our app.
-
-Todo: 
-    - Tweak according to our needs.
+`src/main.cpp` is the entry point of the project and at the moment it contains dummy code to test all the features that are being built. Once a feature is implemented, it can be added to main.cpp. Once all the required features are implemented, pod logic will go in `src/main.cpp`

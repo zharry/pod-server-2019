@@ -1,2 +1,0 @@
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libcan-packet__0.a  CMakeFiles/can-packet__0.dir/.wio/node_modules/can-packet__1.0.1/src/CanPacket.cpp.o CMakeFiles/can-packet__0.dir/.wio/node_modules/can-packet__1.0.1/src/CanPacketDriver.cpp.o
-/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libcan-packet__0.a

@@ -2,7 +2,7 @@
 #include <cmath>
 #include <cstring>
 #include <ctime>
-#include "DatabaseHandler.h"
+#include "DatabaseHandler.hh"
 
 DatabaseHandler* DatabaseHandler::m_pInstance = nullptr;
 
