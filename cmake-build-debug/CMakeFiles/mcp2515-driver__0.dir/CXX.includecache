@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../.wio/node_modules/mcp2515-base__1.0.1/include/MCP2515Base.h
+stdint.h
+-
+
+../.wio/node_modules/mcp2515-driver__1.0.0/include/MCP2515.h
+MCP2515Base.h
+-
+MCP2515Const.h
+-
+
+../.wio/node_modules/mcp2515-driver__1.0.0/include/MCP2515Const.h
+
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/.wio/node_modules/mcp2515-driver__1.0.0/src/MCP2515.cpp
+MCP2515Rates.h
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/.wio/node_modules/mcp2515-driver__1.0.0/src/MCP2515Rates.h
+MCP2515.h
+-
+
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/.wio/node_modules/mcp2515-driver__1.0.0/src/MCP2515Rates.h
+stdint.h
+-
+

@@ -1,0 +1,2 @@
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ar qc libmcp2515-driver__0.a  CMakeFiles/mcp2515-driver__0.dir/.wio/node_modules/mcp2515-driver__1.0.0/src/MCP2515.cpp.o
+/Applications/Xcode.app/Contents/Developer/Toolchains/XcodeDefault.xctoolchain/usr/bin/ranlib libmcp2515-driver__0.a

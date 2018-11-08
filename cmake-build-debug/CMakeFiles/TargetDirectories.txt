@@ -1,0 +1,7 @@
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/cmake-build-debug/CMakeFiles/rebuild_cache.dir
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/cmake-build-debug/CMakeFiles/edit_cache.dir
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/cmake-build-debug/CMakeFiles/wio-sqlite3__0.dir
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/cmake-build-debug/CMakeFiles/wio-sqlitecpp__0.dir
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/cmake-build-debug/CMakeFiles/can-packet__0.dir
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/cmake-build-debug/CMakeFiles/mcp2515-driver__0.dir
+/Users/deep/Development/waterloop/wio-packages/pod-server-2019/cmake-build-debug/CMakeFiles/test.dir
