@@ -30,8 +30,8 @@ dependencies:
     version: 1.0.2
   can-packet:
     version: 1.0.1
-  simple-websocket-server-cpp:
-    version: 1.0.3
+  websocketpp:
+    version: 1.0.0
 
 libraries:
   Threads:
